@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text }}</p>
+        {% if post.published_date %}
+            <div class="date">
+                Опубликовано: {{ post.published_date }}
+            </div>
+        {% endif %}
+        {% if post.author %}
+            <div class="author">
+                Автор: {{ post.author }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
